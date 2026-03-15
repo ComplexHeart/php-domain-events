@@ -1,0 +1,44 @@
+{
+  "name": "complex-heart/domain-events",
+  "description": "Domain event toolset for building rich domain events.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Unay Santisteban",
+      "email": "usantisteban@othercode.io"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^8.2",
+    "complex-heart/contracts": "^3.0.0",
+    "ramsey/uuid": "^4.1.0"
+  },
+  "require-dev": {
+    "pestphp/pest": "^3.8.4",
+    "phpstan/phpstan": "^1.0",
+    "laravel/pint": "^1.25"
+  },
+  "autoload": {
+    "psr-4": {
+      "ComplexHeart\\Domain\\Events\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ComplexHeart\\Domain\\Events\\Test\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/pest --configuration=phpunit.xml --coverage --coverage-clover=coverage.xml --log-junit=test.xml",
+    "analyse": "vendor/bin/phpstan analyse --no-progress --memory-limit=4G",
+    "pint-test": "vendor/bin/pint --preset=psr12 --test",
+    "pint": "vendor/bin/pint --preset=psr12"
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}

@@ -1,0 +1,15 @@
+composer.phar
+/vendor/
+.idea/
+/infrastructure/
+/coverage/
+*[N|n]o[G|g]it*
+coverage.xml
+test.xml
+.phpunit.result.cache
+composer.lock
+wiki/Home.md
+/.phpunit.cache
+.phpactor.json
+/.serena/
+.omc/
